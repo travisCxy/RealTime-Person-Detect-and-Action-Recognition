@@ -1,1 +1,1 @@
-# RealTime-Person-Detect-and-Action-RecognitioN
+# RealTime-Person-Detect-and-Action-Recognition
