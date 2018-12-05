@@ -1,0 +1,2 @@
+Batch1 predicted:1 2 3 4 
+Batch1 labels   :1 23 3 2 

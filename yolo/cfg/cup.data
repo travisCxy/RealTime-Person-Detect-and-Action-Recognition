@@ -1,0 +1,6 @@
+classes= 1
+train  = /home/cc/darknet/data/cup/train.txt
+valid  = /home/cc/darknet/data/cup/test.txt
+names = data/cup.names
+backup = backup
+
