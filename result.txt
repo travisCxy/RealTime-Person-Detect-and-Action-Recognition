@@ -1,0 +1,7 @@
+Video Detect and Recognition label:punching/slapping other person
+Video Detect and Recognition label:pointing to something with finger
+Video Detect and Recognition label:reading
+Video Detect and Recognition label:reading
+Video Detect and Recognition label:reading
+Video Detect and Recognition label:reading
+Video Detect and Recognition label:reading
