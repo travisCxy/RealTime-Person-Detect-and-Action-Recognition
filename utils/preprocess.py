@@ -50,8 +50,8 @@ def prep_image_for_recognize(orig_image, recognize_size, boxes):
 	image_for_recognize, _ = prep_image(crop_image_with_person, recognize_size)
 	return image_for_recognize
 '''
-orig_image = cv2.imread('000010.jpg')
-boxes=[(50,100,230,240)]
+orig_image = cv2.imread('0001.jpg')
+boxes=[(213,-53,242,46)]
 img = prep_image_for_recognize(orig_image, 448, boxes)
 print(img.shape)
 cv2.imwrite('img.jpg', img)

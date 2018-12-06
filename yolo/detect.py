@@ -106,7 +106,7 @@ def detect(opt, image_file, label_file):
                 x1 = (((x1 - pad_x // 2) / unpad_w) * img.shape[1]).round().item()
                 x2 = (x1 + box_w).round().item()
                 y2 = (y1 + box_h).round().item()
-               
+                x1, y1, x2, y2 = max(x1, 0), max(y1, 0),max(x2, 0),max(y2, 0)
 
                 # write to file
                 if opt.txt_out:

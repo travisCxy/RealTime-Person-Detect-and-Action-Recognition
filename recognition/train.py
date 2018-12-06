@@ -11,7 +11,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.autograd import Variable
 
-from opt_ import opt
+from option import opt
 from data.ISO_GD.dataloader import get_dataloaders
 from data.ntu_dataset.dataloader import get_ntu_dataloaders
 from data.UCF101.dataloader import *
@@ -22,19 +22,10 @@ torch.backends.cudnn.benchmark = True
 args = opt
 
 
-if args.dataset == 'NTU':
-	args.listpath = './data/ntu_dataset/list/cross_view'
-	args.datapath = '../../dataset/NTU/ntu_frame'
-	args.skeleton_info_path = '../../dataset/NTU/nturgb+d_skeletons'
-	args.num_classes = 60
-	dataloaders = get_ntu_dataloaders(args)
-elif args.dataset == 'ISOGD':
-	dataloaders = get_dataloaders(args)
-elif args.dataset == 'UCF':
-	args.listpath = './data/UCF101/list'
-	args.datapath = '../../dataset/UCF101/UCF_FRAME'
-	args.num_classes = 101
-	dataloaders = get_ucf_dataloader(args)
+args.listpath = './data/ntu_dataset/list/cross_view'
+args.datapath = '../../dataset/NTU/ntu_frame'
+args.num_classes = 60
+dataloaders = get_ntu_dataloaders(args)
 print('Data Loaded...')
 model = load_model(args)
 params = filter(lambda p: p.requires_grad, model.parameters())

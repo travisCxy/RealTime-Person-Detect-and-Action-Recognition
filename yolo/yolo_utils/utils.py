@@ -53,7 +53,12 @@ def plot_one_box(x, img, color=None, label=None, line_thickness=None):  # Plots 
         c2 = c1[0] + t_size[0], c1[1] - t_size[1] - 3
         cv2.rectangle(img, c1, c2, color, -1)  # filled
         cv2.putText(img, label, (c1[0], c1[1] - 2), 0, tl / 3, [225, 255, 255], thickness=tf, lineType=cv2.LINE_AA)
-
+        cv2.imshow('a', img)
+        cv2.waitKey(3000)
+        
+x = [213,0,242,46]
+img = cv2.imread('0001.jpg')
+plot_one_box(x, img, label='person')
 
 def weights_init_normal(m):
     classname = m.__class__.__name__
