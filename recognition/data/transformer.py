@@ -1,6 +1,7 @@
 import torch
 import numpy as np
 import pandas as pd
+from option import opt
 
 def read_box_info(box_info_path):
 	"""

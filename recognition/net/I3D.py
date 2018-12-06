@@ -107,9 +107,8 @@ class Mixed(torch.nn.Module):
 
 
 class I3D(torch.nn.Module):
-    def __init__(self, num_classes=400, input_size=224, dropout_prob=0, name='inception'):
+    def __init__(self, num_classes=60, input_size=224, dropout_prob=0.5):
         super(I3D, self).__init__()
-        self.name = name
         self.num_classes = num_classes
         self.input_size = input_size
         tk = 1

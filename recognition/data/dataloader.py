@@ -15,9 +15,10 @@ from torchvision import transforms,utils
 from scipy.misc import imread,imresize 
 from PIL import Image
 from transformer import *	
+from option import opt
 
 class NTU_RGB(Dataset):
-	def __init__(self, info_list, box_info_path, root_dir,transform=None, output_frame_numbers=32):
+	def __init__(self, info_list, box_info_path, root_dir,transform=None, output_frame_numbers=opt.time_sample):
 		'''
 		Argument
 		info_list:The list include path/to/data and label
